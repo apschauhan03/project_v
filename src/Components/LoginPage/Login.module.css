@@ -1,0 +1,77 @@
+.LoginPage{
+    height: 100vh;
+
+    background-image: url('../../../public/pexels-aleks-marinkovic-5213549.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* or 'contain' depending on your preference */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loginCredentials{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.individualCredentials{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.showPassword{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 27%;
+    color: grey;
+}
+.individualCredentials>input{
+    /* height: 3rem; */
+    border-radius: 5rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.139);
+    border: none;
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+.loginButton{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+
+}
+.loginButton>button{
+        border-radius: 5rem;
+        border: none;
+        width: 100%;
+        padding: 1rem 1rem;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.393);
+}
+
+.loginButton>button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:920px) {
+    .loginCredentials{
+        width: 100%;
+        height: 100vh;
+    }
+    .individualCredentials{
+        width: 80%;
+    }
+    .loginButton{
+        width: 80%;
+    }
+    .showPassword{
+        right: 13%;
+    }
+}
