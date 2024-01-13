@@ -1,0 +1,22 @@
+.dashboardWrapper {
+    background-image: url('../../Assets/pexels-aleks-marinkovic-5213549.jpg');
+    background-size: cover;
+    /* or 'contain' depending on your preference */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.blurredBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: -1; */
+    backdrop-filter: blur(4px);
+    /* Adjust the blur strength as needed */
+}

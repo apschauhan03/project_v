@@ -1,51 +1,25 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import logo from "../../Assets/Logo/png/logo-no-background-no-name.png";
+import LoginDiv from "./LoginDiv";
+import SignUpDiv from "./SignUpDiv";
 
 function Login() {
-  const [togglePassword, setTogglePassword] = useState(false);
-  const [credentials, setCredentials] = useState({
-    email: "",
-    password: "",
-  });
-  const credentialsChangeHandler = (event) => {
-    setCredentials((prevValue)=>{
-      return {...prevValue,[event.target.name]:event.target.value};
-    })
-  };
-  const togglePasswordHandler = () => {
-    setTogglePassword(!togglePassword);
-  };
-  const onSubmitHandler = ()=>{
-    console.log("helo");
-    console.log(credentials);
+  const [signUp,setSignUp] = useState(false);
+  const signUpHandler = () =>{
+    setSignUp(true);
+  }
+  const loginHandler = () =>{
+    setSignUp(false);
   }
   return (
     <div className={styles.LoginPage}>
-      <div className={styles.loginCredentials}>
-        <div className={styles.individualCredentials}>
-          <input
-            onChange={credentialsChangeHandler}
-            name="email"
-            value={credentials.email}
-            placeholder="Email"
-          ></input>
+      <div className={styles.blurredBackground}></div>
+      <div className={styles.loginCredentialsWrapper}>
+        <div className={styles.loginLogo}>
+          <img src={logo} alt="gammalogo" />
         </div>
-        <div className={styles.individualCredentials}>
-          <input
-          name="password"
-            onChange={credentialsChangeHandler}
-            value={credentials.password}
-            type={togglePassword ? "text" : "password"}
-            placeholder="Password"
-          />
-          <span onClick={togglePasswordHandler} className={styles.showPassword}>
-            {togglePassword ? <FaRegEyeSlash /> : <FaRegEye />}
-          </span>
-        </div>
-        <div className={styles.loginButton}>
-          <button onClick={onSubmitHandler}>Submit</button>
-        </div>
+        {signUp?<SignUpDiv loginHandler={loginHandler}/>:<LoginDiv signUpHandler={signUpHandler} />}
       </div>
     </div>
   );
