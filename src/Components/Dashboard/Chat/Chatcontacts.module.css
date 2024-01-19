@@ -1,0 +1,96 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 1rem 1rem;
+    font-size: larger;
+    font-weight: 550;
+}
+.searchChats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.3rem;
+    border-radius: 2px;
+}
+.searchChats:hover{
+    background-color: rgba(128, 128, 128, 0.289);
+    cursor: pointer;
+}
+.chatHistory{
+    overflow:auto;
+    height: 100vh;
+    /* padding: 0.3rem 0.3rem; */
+}
+
+/* Styling for the scrollbar */
+.chatHistory::-webkit-scrollbar {
+    width: 2px; /* Set the width of the scrollbar */
+}
+
+  
+  .chatHistory::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Set the border radius of the scrollbar thumb */
+  }
+  
+  .chatHistory::-webkit-scrollbar-track {
+
+    background-color: none; /* Set the color of the scrollbar track */
+  }
+.individualCredentials{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.individualCredentials>input{
+    /* height: 3rem; */
+    border-radius: 5rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.139);
+    border: none;
+    width: 80%;
+    padding: 0.5rem 0.5rem;
+}
+.chatContact{
+    background-color: rgba(255, 255, 255, 0.139);
+    color: white;
+    border-radius: 3px;
+    margin: 0.3rem 0.3rem;
+    margin-top: 0;
+    padding: 0.3rem 0.3rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items:center ;
+    flex-direction: row;
+}
+.chatContact:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.391);
+    
+}
+.chatUserDetails{
+    padding: 0.5rem 0.5rem;
+}
+.messagePreview{
+    font-size: small;
+    font-weight: lighter;
+    /* max-height: 35px; */
+}
+
+.profilePic{
+    width: 20%;
+    padding: 0.3rem 0.3rem;
+}
+.profilePic>img{
+    max-height:100% ;
+    object-fit: contain;
+    border: 1px solid white;
+    border-radius: 50%;
+    max-width: 100%;
+}

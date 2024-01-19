@@ -27,7 +27,7 @@ function Sidepanel() {
           <IoSettingsOutline style={{ color: "white" }} />
         </div>
         <div className={styles.sidePanelProfilePic}>
-          <img src={profilePic} />
+          <img src={profilePic} alt="profile_picture" />
         </div>
       </div>
     </div>
