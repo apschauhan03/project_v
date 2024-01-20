@@ -9,7 +9,6 @@ function Dashboard() {
   return (
     <div className={styles.dashboardWrapper}>
       <div className={styles.blurredBackground}></div>
-      <Sidepanel />
       <Panel />
     </div>
   );

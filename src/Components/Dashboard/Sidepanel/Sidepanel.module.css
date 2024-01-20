@@ -1,7 +1,7 @@
 .sidePanel{
     height: 100vh;
     position: relative;
-    width: 37px;
+    width: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
