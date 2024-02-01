@@ -13,6 +13,7 @@ function App() {
         const { exp } = jwtDecode(token);
         const expTime = exp * 1000;
         if (Date.now() <= expTime) {
+
           return setLoggedIn(true);
         }
       }
@@ -20,7 +21,7 @@ function App() {
     };
     getDetailsFromAPI();
   }, []);
-  return <div className="App">{loggedIn ? <Dashboard /> : <Login />}</div>;
+  return <div className="App">{loggedIn ? <Dashboard/> : <Login />}</div>;
 }
 
 export default App;

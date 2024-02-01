@@ -6,16 +6,18 @@ import {
   IoSettingsOutline,
 } from "react-icons/io5";
 import { CiStreamOn } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 import profilePic from "../../../Assets/MERE-NAAM-TU.jpg";
 
 function Sidepanel() {
+  const navigate = useNavigate();
   return (
     <div className={styles.sidePanel}>
       <div className={styles.upperPanel}>
-        <div className={styles.sidePanelIcon}>
+        <div onClick={()=>navigate('/')} className={styles.sidePanelIcon}>
           <IoChatboxOutline style={{ color: "white" }} />
         </div>
-        <div className={styles.sidePanelIcon}>
+        <div onClick={()=>navigate('/calling')} className={styles.sidePanelIcon}>
           <IoCallOutline style={{ color: "white" }} />
         </div>
         <div className={styles.sidePanelIcon}>
